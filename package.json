@@ -33,7 +33,7 @@
   "scripts": {
     "add-change": "pnpm changeset",
     "bump-version": "pnpm changeset version",
-    "ci:publish": "pnpm publish -r"
+    "ci:publish": "pnpm publish -r --access public"
   },
   "peerDependencies": {
     "eslint": "^9.20.1",
