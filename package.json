@@ -23,6 +23,12 @@
       "default": "./lib/prettier.config.js"
     }
   },
+  "files": [
+    "./lib",
+    "./README.md",
+    "./LICENSE.md",
+    "./package.json"
+  ],
   "scripts": {
     "add-change": "pnpm changeset",
     "bump-version": "pnpm changeset version",
