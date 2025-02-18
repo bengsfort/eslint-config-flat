@@ -1,0 +1,52 @@
+name: Release package
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  CI: true
+
+jobs:
+  release:
+    name: Release package
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - name: 🏃‍♂️ Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: 🔨 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: 🧨 Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: 💥 Install deps
+        run: pnpm install
+
+      - name: 🚀 Create and publish new version
+        uses: changesets/action@v1
+        with:
+          version: pnpm bump-version
+          commit: "chore: Update package version"
+          title: "chore: Update package version"
+          publish: pnpm ci:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
