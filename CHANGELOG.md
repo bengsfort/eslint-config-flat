@@ -1,5 +1,11 @@
 # @bengsfort/eslint-config-flat
 
+## 0.2.2
+
+### Patch Changes
+
+- b6a4b9e: Add eslint-plugin-promise.
+
 ## 0.2.1
 
 ### Patch Changes
