@@ -1,5 +1,13 @@
 # @bengsfort/eslint-config-flat
 
+## 0.2.3
+
+### Patch Changes
+
+- 20a9a64: [internal] Enable creating github releases on successful publishes
+- 296756e: Removed Astro prettier plugin from prettier config
+- 296756e: Expose tseslint disableTypeChecked config
+
 ## 0.2.2
 
 ### Patch Changes
