@@ -3,7 +3,7 @@
   "description": "Flat version of my eslint config.",
   "author": "Matt Bengston <bengsfort@gmail.com> (https://bengsfort.dev)",
   "homepage": "https://github.com/bengsfort/eslint-config-flat",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "bugs": {
     "url": "https://github.com/bengsfort/eslint-config-flat/issues"
   },
