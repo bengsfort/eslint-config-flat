@@ -1,5 +1,11 @@
 # @bengsfort/eslint-config-flat
 
+## 0.2.4
+
+### Patch Changes
+
+- cf6ab4a: Disable 'import/no-unresolved' due to excessive false-positives
+
 ## 0.2.3
 
 ### Patch Changes
