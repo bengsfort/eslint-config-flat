@@ -1,5 +1,11 @@
 # @bengsfort/eslint-config-flat
 
+## 0.2.5
+
+### Patch Changes
+
+- 31b366a: Expose the ts-eslint config helper function for easier composability.
+
 ## 0.2.4
 
 ### Patch Changes
